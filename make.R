@@ -62,4 +62,17 @@ map %>%
 ggplot(data = map) +
   geom_sf(aes(fill = WHO_region))
 
-sf::write_sf(map, 'Output/WHORegions.shp')
+# 4. Create a dissolved product
+
+sf_use_s2(FALSE)
+map %>%
+  group_by(WHO_region) %>%
+  summarize() -> boundaries 
+
+ggplot(data = boundaries) +
+  geom_sf(aes(fill = WHO_region))
+
+# 5. Write files 
+
+sf::write_sf(map, 'Output/WHORegionsCountry.shp')
+sf::write_sf(boundaries, 'Output/WHORegionsBoundary.shp')
