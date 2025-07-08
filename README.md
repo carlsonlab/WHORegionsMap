@@ -1,7 +1,3 @@
 # WHO Regional Offices 
 
-This repository uses two openly-available datasets to create a WHO Regional Offices map that can be distributed under a CC-BY license. 
-
-WHO Regional Office data is taken from their [Covid-19 data](https://data.who.int/dashboards/covid19/data), distributed under CC-BY.
-
-Global administrative units are taken from [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/), which distributes its data in the public domain.
+This repository uses two openly-available datasets to create a WHO Regional Offices map. This dataset is distributed under a [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). WHO Regional Office data is taken from their [Covid-19 data](https://data.who.int/dashboards/covid19/data), also distributed under CC-BY 4.0. Global administrative units are taken from [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/), which distributes its data in the public domain. The two are assembled in R, with some expert decisions made about adjudication. For the most part, these lean towards excluding geounits that are conventionally seen as disputed or excluded from the relevant WHO region(s), as well as towards excluding minor island territories of European countries, Australia, and China.
